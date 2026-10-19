@@ -1,4 +1,3 @@
-import math
 import pytest
 from pymath_utils.geometry import circle_area, rectangle_area, triangle_area, distance
 
