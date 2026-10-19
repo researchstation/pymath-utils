@@ -21,6 +21,7 @@ geometry.circle_area(5)      # 78.5398...
 
 - **arithmetic** — GCD, LCM, prime checks, factorial
 - **geometry** — Area and perimeter for common shapes
+- **matrix** — Matrix multiplication and transpose
 - **statistics** — Mean, median, mode, standard deviation
 
 ## Development
