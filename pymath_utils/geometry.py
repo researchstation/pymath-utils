@@ -7,7 +7,7 @@ def circle_area(radius: float) -> float:
     """Area of a circle."""
     if radius < 0:
         raise ValueError("Radius must be non-negative")
-    return math.pi * radius ** 2
+    return math.pi * radius**2
 
 
 def circle_circumference(radius: float) -> float:
