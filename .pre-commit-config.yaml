@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 26.10.1
+    hooks:
+      - id: black
+        language_version: python3
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.1.0
+    hooks:
+      - id: flake8
+        args: ["--max-line-length=120"]
+
+  - repo: https://github.com/researchstation/python-lint
+    rev: v5.0.2
+    hooks:
+      - id: python-lint
+        name: Python lint check
+        types: [python]

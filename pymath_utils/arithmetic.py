@@ -3,6 +3,13 @@
 import math
 
 
+def lerp(a: float, b: float, t: float) -> float:
+    """Return the linear interpolation between a and b at t in [0, 1]."""
+    if not 0 <= t <= 1:
+        raise ValueError("t must be between 0 and 1")
+    return a + (b - a) * t
+
+
 def gcd(a: int, b: int) -> int:
     """Greatest common divisor using Euclidean algorithm."""
     if not isinstance(a, int) or not isinstance(b, int):
