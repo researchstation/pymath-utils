@@ -1,5 +1,5 @@
 import pytest
-from pymath_utils.arithmetic import gcd, lcm, is_prime, factorial, fibonacci
+from pymath_utils.arithmetic import gcd, lcm, is_prime, factorial, fibonacci, lerp
 
 
 class TestGCD:
@@ -54,3 +54,17 @@ class TestFibonacci:
 
     def test_one(self):
         assert fibonacci(1) == [0]
+
+
+class TestLerp:
+    def test_interpolates(self):
+        assert lerp(10, 20, 0.25) == 12.5
+
+    def test_endpoints(self):
+        assert lerp(10, 20, 0) == 10
+        assert lerp(10, 20, 1) == 20
+
+    @pytest.mark.parametrize("t", [-0.1, 1.1, float("nan")])
+    def test_out_of_range_raises(self, t):
+        with pytest.raises(ValueError):
+            lerp(10, 20, t)

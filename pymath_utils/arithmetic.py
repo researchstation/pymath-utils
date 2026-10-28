@@ -53,3 +53,10 @@ def fibonacci(n: int) -> list[int]:
     for _ in range(2, n):
         seq.append(seq[-1] + seq[-2])
     return seq
+
+
+def lerp(a: float, b: float, t: float) -> float:
+    """Return the linear interpolation between a and b at t in [0, 1]."""
+    if not 0 <= t <= 1:
+        raise ValueError("t must be between 0 and 1")
+    return a + (b - a) * t
